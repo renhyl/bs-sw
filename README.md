@@ -8,11 +8,11 @@ This is simple demo app demonstrating use of NextJS v14 with TailwindCSS, Apollo
 
 copy `.env.example` file, rename to `.env` or `.env.local`
 
-run cmd: `npm i`
+run cmd: `npm i` to install npm dependencies
 
-run cmd: `npm run generate-gql`
+run cmd: `npm run generate-gql` to generate graphql typescript types
 
-run cmd: `npm run dev`
+run cmd: `npm run dev` to start nextjs in dev mode
 
 ## Build
 
