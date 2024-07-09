@@ -1,0 +1,17 @@
+query AllPeople($first: Int) {
+    allPeople(first: $first) {
+        edges {
+            node {
+                name
+            }
+            cursor
+        }
+        pageInfo {
+            startCursor
+            endCursor
+            hasNextPage
+            hasPreviousPage
+        }
+        totalCount
+    }
+}
