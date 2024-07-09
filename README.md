@@ -1,6 +1,24 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## App Description
+
+This is simple demo app demonstrating use of NextJS v14 with TailwindCSS, Apollo Client and GraphQL (including graphql-codegen). App is using public Star Wars API: https://studio.apollographql.com/public/star-wars-swapi/variant/current/explorer
+
+## Local Dev Setup
+
+copy `.env.example` file, rename to `.env` or `.env.local`
+
+run cmd: `npm i`
+
+run cmd: `npm run generate-gql`
+
+run cmd: `npm run dev`
+
+## Build
+
+run cmd: `npm run build`
+
+## Running App
 
 First, run the development server:
 
@@ -24,8 +42,8 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+-   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
