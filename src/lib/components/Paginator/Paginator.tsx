@@ -11,7 +11,9 @@ import {
     PaginationNext,
     PaginationLink,
     PaginationPrevious,
-    PaginationEllipsis
+    PaginationEllipsis,
+    PaginationFirst,
+    PaginationLast
 } from '@/components/ui/pagination'
 
 interface IPaginator {
@@ -47,7 +49,7 @@ const Paginator: React.FC<IPaginator> = ({
                     <PaginationLink
                         key={index}
                         href="#"
-                        className={cn(index + 1 === currentPage ? 'bg-green-200' : '')}
+                        className={cn(index + 1 === currentPage ? 'bg-green-200 active' : '')}
                         onClick={() => onPageChange(index + 1)}
                     >
                         {index + 1}
@@ -74,6 +76,15 @@ const Paginator: React.FC<IPaginator> = ({
         <Pagination>
             <PaginationContent>
                 <PaginationItem>
+                    <PaginationFirst
+                        onClick={() => setCurrentPage && setCurrentPage(1)}
+                        className={
+                            currentPage === 1 ? 'bg-gray-300 text-gray-600 cursor-not-allowed' : ''
+                        }
+                        aria-disabled={currentPage === 1}
+                    />
+                </PaginationItem>
+                <PaginationItem>
                     <PaginationPrevious
                         onClick={handlPrevPage}
                         className={
@@ -92,6 +103,17 @@ const Paginator: React.FC<IPaginator> = ({
                                 ? 'bg-gray-300 text-gray-600 cursor-not-allowed'
                                 : ''
                         }
+                    />
+                </PaginationItem>
+                <PaginationItem>
+                    <PaginationLast
+                        onClick={() => setCurrentPage && setCurrentPage(pageCount)}
+                        className={
+                            currentPage === pageCount
+                                ? 'bg-gray-300 text-gray-600 cursor-not-allowed'
+                                : ''
+                        }
+                        aria-disabled={currentPage === pageCount}
                     />
                 </PaginationItem>
             </PaginationContent>

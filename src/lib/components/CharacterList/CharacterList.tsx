@@ -28,7 +28,7 @@ const CharacterList: React.FC<IStarWarsCharacters> = ({
 
     return (
         <div className="flex flex-col gap-1">
-            <ul {...rest}>
+            <ul className="characters-list" {...rest}>
                 {currentData.map((character, index: number) => (
                     <li key={`person-${index}`}>{character?.node?.name}</li>
                 ))}

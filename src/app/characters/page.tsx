@@ -19,6 +19,7 @@ export default async function Page() {
 
     return (
         <div className="container">
+            <h1>Star Wars Characters:</h1>
             <div className="flex flex-col text-center">
                 <PreloadQuery query={AllPeopleDocument}>
                     <Suspense
